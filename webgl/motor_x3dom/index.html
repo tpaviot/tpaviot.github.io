@@ -1,0 +1,648 @@
+<!DOCTYPE HTML><html lang="en">
+<head>
+    <title>pythonOCC 0.18.2-dev x3dom renderer</title>
+    <meta name='Author' content='Thomas Paviot - tpaviot@gmail.com'>
+    <meta name='Keywords' content='WebGl,pythonOCC'>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://x3dom.org/release/x3dom.css" charset="utf-8" ></link>
+    <script type="text/javascript" src="https://x3dom.org/release/x3dom-full.js"></script>
+    <style type="text/css">
+        body {
+            background: linear-gradient(#ced7de, #808080);
+            margin: 0px;
+            overflow: hidden;
+        }
+        #pythonocc_rocks {
+            padding: 5px;
+            position: absolute;
+            left: 1%;
+            bottom: 2%;
+            height: 38px;
+            width: 280px;
+            border-radius: 5px;
+            border: 2px solid #f7941e;
+            opacity: 0.7;
+            font-family: Arial;
+            background-color: #414042;
+            color: #ffffff;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        #commands {
+            padding: 5px;
+            position: absolute;
+            right: 1%;
+            top: 2%;
+            height: 65px;
+            width: 180px;
+            border-radius: 5px;
+            border: 2px solid #f7941e;
+            opacity: 0.7;
+            font-family: Arial;
+            background-color: #414042;
+            color: #ffffff;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+        a {
+            color: #f7941e;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    
+	<x3d id="pythonocc-x3d-scene" style="width:100%;border: none" >
+		<Scene>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1505421895.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp507085756.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp965612620.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2058054.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp147555802.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2040302422.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2040019142.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2040348550.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp255294970.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp255241722.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp255315482.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp254974490.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp906658059.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp906027243.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp906855947.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1227164059.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1234532506.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1762543907.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1596725319.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2146868087.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2146941559.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2081291975.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2080417719.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1255829987.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1255762819.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp457449475.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp457609891.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1728600035.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1729031795.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1728992995.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1728849635.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1642697927.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp688180403.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp772403235.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1320011319.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp855730851.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp863353251.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp698061459.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1411933031.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1412160151.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1412072871.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1412152775.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1412826567.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1109491383.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1111246327.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1574305299.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1573397011.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1574763459.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1574741955.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1194615351.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1589017943.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1589389863.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1588770199.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1466086803.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1466043795.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1465652531.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp439156547.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp439127939.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp199369047.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp199429207.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991664439.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991626551.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991273335.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991323895.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991758711.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991646455.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991596919.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991294199.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991575415.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991489783.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991508855.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991316727.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991268215.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991375095.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991841655.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991367927.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991553911.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991344375.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991568247.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991552247.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991713655.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991271671.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991744375.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1991688439.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp182002007.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp181931095.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005754679.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005847863.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005625719.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005545207.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005717879.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005736695.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005818231.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005646583.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005796727.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005448951.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005861239.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005538039.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005620599.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005596407.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005014391.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005589239.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005906295.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005565687.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005920631.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005904631.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005672823.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005624055.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005703543.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2005778679.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp853895987.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1193555635.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1193858627.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2093596227.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2093216643.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2093091747.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2093194147.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2094282659.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2094068643.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2094394275.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2094201763.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp902645731.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1192688227.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1590889955.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1591084611.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1590716995.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1542542388.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1959538276.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1959721396.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1959163428.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1958761988.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1113774924.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1115295052.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230624028.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230704924.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230380316.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230150940.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230665980.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1230059772.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1218765036.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1219224812.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2074723796.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2075087972.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp679773972.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp621746663.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1984216135.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1984312135.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1983955895.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1984578359.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp24503166.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp24586622.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp173331758.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp173391150.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp173243694.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp173398318.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp172537038.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp172501198.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp195786974.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp195599582.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp976536967.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp976376887.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1763280711.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2105773875.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2080137699.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2080173299.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2079823091.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2079745267.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp588112494.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1020632318.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1020565982.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1019375404.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1212213148.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp981520604.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp382479772.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1802965039.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1248872527.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp936210556.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp936865068.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2140395788.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp771196540.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp770810492.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1423430415.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp110781567.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2142464268.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2142427404.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp771076732.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp770710140.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp771110524.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp770748028.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2142368060.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp936330540.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2083559004.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2083704908.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1954711964.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp988795523.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp874707203.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp874521747.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2125427683.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2125206499.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1817868627.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1817850195.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1814577107.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1814706131.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1946476979.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2026839731.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp985101619.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp841229667.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1962601907.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1962564019.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp884640691.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1609244556.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1368454556.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1368436780.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1310186643.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1309839507.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1309950099.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2069247724.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2069233468.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp361010744.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp361117224.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp362519000.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp360901144.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp361040408.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp189451240.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp189244504.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp368094984.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp363178376.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp362951048.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp819912551.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp819967847.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp819683175.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp819614567.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp443029928.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp442847032.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2106789303.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2106940855.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2107483575.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1387279314.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1383888610.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1436628386.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1436663970.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1436648866.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1436643490.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp37946077.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp41637933.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp23911053.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp47251725.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp47424093.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp35022957.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp471168606.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp469824366.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp470564350.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp470751086.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp470473214.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp324292942.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp323563022.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp483473214.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp479539054.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1966148083.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1965896179.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1966356979.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1966132723.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2041405283.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2041221987.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp508675726.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp509071454.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp508955742.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1940952019.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1941748339.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1407160815.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1406407295.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1406655103.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1406768767.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1406665343.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1345799647.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1345380415.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1347009919.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1834849719.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1833188743.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1832169207.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1343106047.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1859484439.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1861058631.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1342995599.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1342707695.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1344667711.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1344603023.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1346347823.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1345547919.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1344659647.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1345069247.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1891977919.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1378957359.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1379642975.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1375802463.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1940795279.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1941034959.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1941134095.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1941053423.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1893446271.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1893092719.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1881649791.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1881820527.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1978971875.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1838885554.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1656425314.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1655844706.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1656477538.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1656382306.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282832066.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp278630514.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp278648946.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp309299301.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp309819237.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp327256165.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp328824677.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp327714917.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp328234853.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp336431205.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp336951141.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282487378.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282397954.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282366210.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282513666.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282454274.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282672386.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282831106.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282439938.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282751234.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282192514.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282141314.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282164866.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282155650.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283137666.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283266690.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283316866.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp282871426.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283275906.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283258482.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp283010674.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp280762290.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp58488917.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp57672885.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279184453.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279157829.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279032853.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279034501.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp280682117.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp526079621.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp204972658.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp527898901.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279446258.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279868146.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279644562.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279345010.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279050098.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp279244658.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1282498310.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp18632082.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp20678498.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp20051394.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp20188706.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp20072210.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp33444882.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp34364466.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1328017894.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325541186.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325347650.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325394946.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325192002.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325808690.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325968226.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325598562.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325597506.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325751106.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325988674.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326100290.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325717314.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325773634.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325781826.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325997890.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326432066.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325699906.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325722434.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326062402.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326048066.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325606722.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325611842.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325744962.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325863746.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325834050.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325850434.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326085954.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325626178.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326057282.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325791042.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325937474.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325796162.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326379842.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326417730.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326017346.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326071618.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325640514.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325872962.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325943618.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326389058.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326394178.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325952834.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp326468930.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1329140006.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1328847142.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1329220902.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1329294630.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1329444790.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1329041334.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327781318.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327966662.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327851974.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327695302.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327870406.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1327718854.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1339508598.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1339442038.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1338162598.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1338172758.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1326772662.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1338599974.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1328170742.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp910344489.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2002324703.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp2002694703.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1990277679.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1070526336.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1009718560.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1009707296.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1064508320.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1065220448.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp306717589.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp803362736.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp803344464.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp784488368.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp784470096.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp475296802.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp836314962.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp835107666.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1399325730.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1399254722.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734710075.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp721560603.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1373838691.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1374064099.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1374055539.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp777574875.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1101008002.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1101987058.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1050194027.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1049678699.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1051401307.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp957901323.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1046301819.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1087387730.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp3888427.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp3639547.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp3823083.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp64518091.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp51754891.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp51606411.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp78013707.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp83893099.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp100153915.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp153797979.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp144389883.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1085595730.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp146605115.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp159693867.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp159694891.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp167440843.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp167730219.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp167568427.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1186159330.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1112763394.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1197955810.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1132948482.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1189960418.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1108175874.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200380642.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1131179010.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp732379616.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp735730144.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1552565874.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1552233010.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1552095362.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1552131202.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1552065874.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1576557810.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1569807554.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734509248.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1583352434.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1584024114.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1583520898.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1583737986.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1584174418.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1595316466.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1595337922.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734744768.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734080080.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734250064.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734221392.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp734138448.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp336893026.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp337083138.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp338394866.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp325282770.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp308714530.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp723197840.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp723190352.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp723167904.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp723364208.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp182609760.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp182718304.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp182645600.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200968112.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200672176.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200701872.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200653744.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1201529264.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp1200758192.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp363435394.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp363455026.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp363445810.x3d"></Inline>
+			<Inline onload="fitCamera()" mapDEFToID="true" url="shp363638322.x3d"></Inline>
+		</Scene>
+	</x3d>
+
+    <div id="pythonocc_rocks">
+        pythonocc-0.18.2-dev <a href="https://www.x3dom.org" target="_blank">x3dom</a> renderer
+        <br>Check our blog at
+        <a href=http://www.pythonocc.org>http://www.pythonocc.org</a>
+    </div>
+    <div id="commands">
+    <b>t</b> view/hide shape<br>
+    </div>
+    <script>
+    var selected_target_color = null;
+    var current_selected_shape = null;
+    var current_mat = null;
+    function fitCamera()
+    {            
+        var x3dElem = document.getElementById('pythonocc-x3d-scene');            
+        x3dElem.runtime.fitAll();
+    }
+    function select(the_shape) // called whenever a shape is clicked
+    {
+        // restore color for previous selected shape
+        if (current_mat) {
+            current_mat.diffuseColor = selected_target_color;
+        }
+        // store the shape for future process
+        current_selected_shape = the_shape;
+        console.log(the_shape);
+        // store color, to be restored later
+        appear = current_selected_shape.getElementsByTagName("Appearance")[0];
+        mat = appear.getElementsByTagName("Material")[0];
+        current_mat = mat;
+        console.log(mat);
+        selected_target_color = mat.diffuseColor;
+        mat.diffuseColor = "1, 0.65, 0";
+        //console.log(the_shape.getElementsByTagName("Appearance"));//.getAttribute('diffuseColor'));
+    }
+    function onDocumentKeyPress(event) {
+      event.preventDefault();
+      if (event.key=="t") {  // t key
+         if (current_selected_shape) {
+           if (current_selected_shape.render == "true") {
+              current_selected_shape.render = "false";
+           }
+           else {
+              current_selected_shape.render = "true";
+           }
+         }
+      }
+
+    }
+    // add events
+    document.addEventListener('keypress', onDocumentKeyPress, false);
+    </script>
+</body>
+</html>

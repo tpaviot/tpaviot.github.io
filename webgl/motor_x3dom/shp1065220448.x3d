@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Immersive" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+<head>
+    <meta name="generator" content="pythonocc-0.18.2-dev X3D exporter (www.pythonocc.org)"/>
+    <meta name="title" content="shape-export.x3d"/>
+    <meta name="creator" content="pythonocc-0.18.2-dev generator"/>
+    <meta name="identifier" content="http://www.pythonocc.org"/>
+    <meta name="description" content="pythonocc-0.18.2-dev x3dom based shape rendering"/>
+</head>
+<Scene>
+        <Shape DEF="shape436" onclick="select(this);"><Appearance>
+<Material id='color' diffuseColor='0.65 0.65 0.65' shininess='0.9' specularColor='1 1 1' transparency='0'>
+</Material>
+</Appearance>
+<TriangleSet solid='false'>
+<Coordinate point='-190.5 342.3 150.5
+-101.6 266.1 148.3
+-101.6 342.3 150.5
+-190.5 266.1 148.3
+-101.6 266.1 148.3
+-190.5 342.3 150.5
+-101.6 346.7 -1.854
+-190.5 342.3 150.5
+-101.6 342.3 150.5
+-101.6 346.7 -1.854
+-190.5 346.7 -1.854
+-190.5 342.3 150.5
+-190.5 346.7 -1.854
+-190.5 266.1 148.3
+-190.5 342.3 150.5
+-190.5 346.7 -1.854
+-190.5 270.5 -4.036
+-190.5 266.1 148.3
+-190.5 270.5 -4.036
+-101.6 266.1 148.3
+-190.5 266.1 148.3
+-190.5 270.5 -4.036
+-101.6 270.5 -4.036
+-101.6 266.1 148.3
+-101.6 270.5 -4.036
+-101.6 342.3 150.5
+-101.6 266.1 148.3
+-101.6 270.5 -4.036
+-101.6 346.7 -1.854
+-101.6 342.3 150.5
+-101.6 270.5 -4.036
+-190.5 346.7 -1.854
+-101.6 346.7 -1.854
+-101.6 270.5 -4.036
+-190.5 270.5 -4.036
+-190.5 346.7 -1.854
+'></Coordinate>
+<Normal vector='0 -0.02864 0.9996
+0 -0.02864 0.9996
+0 -0.02864 0.9996
+0 -0.02864 0.9996
+0 -0.02864 0.9996
+0 -0.02864 0.9996
+0 0.9996 0.02864
+0 0.9996 0.02864
+0 0.9996 0.02864
+0 0.9996 0.02864
+0 0.9996 0.02864
+0 0.9996 0.02864
+-1 0 0
+-1 0 0
+-1 0 0
+-1 0 0
+-1 0 0
+-1 0 0
+0 -0.9996 -0.02864
+0 -0.9996 -0.02864
+0 -0.9996 -0.02864
+0 -0.9996 -0.02864
+0 -0.9996 -0.02864
+0 -0.9996 -0.02864
+1 0 0
+1 0 0
+1 0 0
+1 0 0
+1 0 0
+1 0 0
+0 0.02864 -0.9996
+0 0.02864 -0.9996
+0 0.02864 -0.9996
+0 0.02864 -0.9996
+0 0.02864 -0.9996
+0 0.02864 -0.9996
+'></Normal>
+</TriangleSet>
+</Shape>
+</Scene>
+</X3D>
