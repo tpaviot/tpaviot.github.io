@@ -1,0 +1,23 @@
+{
+	"metadata": {
+		"version": 4.4,
+		"type": "BufferGeometry",
+		"generator": "pythonOCC"
+	},
+	"uuid": "0b4b7d34b4c34adf93a559a551b392a0",
+	"type": "BufferGeometry",
+	"data": {
+	"attributes": {
+			"position": {
+				"itemSize": 3,
+				"type": "Float32Array",
+				"array": [13.01,35.01,140.9,12.54,35.18,140.9,9.061,25.63,144.3,13.01,35.01,140.9,9.061,25.63,144.3,9.531,25.46,144.3]
+			},
+			"normal": {
+				"itemSize": 3,
+				"type": "Float32Array",
+				"array": [0.1082,0.2972,0.9487,0.1082,0.2972,0.9487,0.1082,0.2972,0.9487,0.1082,0.2972,0.9487,0.1082,0.2972,0.9487,0.1082,0.2972,0.9487]
+			}
+		}
+	}
+}
