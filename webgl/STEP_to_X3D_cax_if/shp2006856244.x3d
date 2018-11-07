@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Immersive" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+<head>
+    <meta name="generator" content="pythonocc-0.18.2-dev X3D exporter (www.pythonocc.org)"/>
+    <meta name="title" content="shape-export.x3d"/>
+    <meta name="creator" content="pythonocc-0.18.2-dev generator"/>
+    <meta name="identifier" content="http://www.pythonocc.org"/>
+    <meta name="description" content="pythonocc-0.18.2-dev x3dom based shape rendering"/>
+</head>
+<Scene>
+        <Shape DEF="shape2" onclick="select(this);"><Appearance>
+<Material id='color' diffuseColor='1 0 0' shininess='0.9' specularColor='1 1 1' transparency='0'>
+</Material>
+</Appearance>
+<TriangleSet solid='false'>
+<Coordinate point='175 82.5 50
+178 82.5 50
+178 67.5 50
+175 82.5 50
+178 67.5 50
+175 67.5 50
+'></Coordinate>
+<Normal vector='0 0 -1
+0 0 -1
+0 0 -1
+0 0 -1
+0 0 -1
+0 0 -1
+'></Normal>
+</TriangleSet>
+</Shape>
+<Switch whichChoice='0'>
+	<Group>
+		<Shape DEF="edg0">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='175 67.5 50 175 82.5 50 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg1">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='175 82.5 50 178 82.5 50 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg2">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='178 82.5 50 178 67.5 50 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg3">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='175 67.5 50 178 67.5 50 '/></LineSet>
+		</Shape>
+	</Group>
+</Switch>
+</Scene>
+</X3D>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile="Immersive" version="3.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+<head>
+    <meta name="generator" content="pythonocc-0.18.2-dev X3D exporter (www.pythonocc.org)"/>
+    <meta name="title" content="shape-export.x3d"/>
+    <meta name="creator" content="pythonocc-0.18.2-dev generator"/>
+    <meta name="identifier" content="http://www.pythonocc.org"/>
+    <meta name="description" content="pythonocc-0.18.2-dev x3dom based shape rendering"/>
+</head>
+<Scene>
+        <Shape DEF="shape34" onclick="select(this);"><Appearance>
+<Material id='color' diffuseColor='1 0 0' shininess='0.9' specularColor='1 1 1' transparency='0'>
+</Material>
+</Appearance>
+<TriangleSet solid='false'>
+<Coordinate point='35 82.5 0
+30 75 0
+35 67.5 0
+35 82.5 0
+15 82.5 0
+24.87 80 0
+24.87 80 0
+15 82.5 0
+23.83 79.86 0
+35 82.5 0
+24.87 80 0
+25.93 79.91 0
+30 75 0
+29.96 74.35 0
+35 67.5 0
+22.01 79.01 0
+15 82.5 0
+21.33 78.39 0
+21.93 71.05 0
+21.13 71.84 0
+15 67.5 0
+20.52 72.78 0
+15 67.5 0
+21.13 71.84 0
+22.97 70.43 0
+21.93 71.05 0
+15 67.5 0
+20.12 73.9 0
+15 67.5 0
+20.52 72.78 0
+24.07 70.09 0
+22.97 70.43 0
+15 67.5 0
+20 75 0
+15 67.5 0
+20.12 73.9 0
+22.86 79.52 0
+15 82.5 0
+22.01 79.01 0
+35 67.5 0
+26.17 70.14 0
+25.13 70 0
+35 67.5 0
+27.14 70.48 0
+26.17 70.14 0
+35 67.5 0
+27.99 70.99 0
+27.14 70.48 0
+35 67.5 0
+28.67 71.61 0
+27.99 70.99 0
+25.13 70 0
+24.07 70.09 0
+15 67.5 0
+35 67.5 0
+29.2 72.28 0
+28.67 71.61 0
+35 67.5 0
+25.13 70 0
+15 67.5 0
+29.57 72.97 0
+29.2 72.28 0
+35 67.5 0
+15 82.5 0
+20.19 76.36 0
+20.43 77.03 0
+29.81 73.64 0
+29.57 72.97 0
+35 67.5 0
+15 82.5 0
+20.04 75.65 0
+20.19 76.36 0
+15 82.5 0
+20 75 0
+20.04 75.65 0
+15 82.5 0
+15 67.5 0
+20 75 0
+23.83 79.86 0
+15 82.5 0
+22.86 79.52 0
+20.8 77.72 0
+15 82.5 0
+20.43 77.03 0
+29.96 74.35 0
+29.81 73.64 0
+35 67.5 0
+21.33 78.39 0
+15 82.5 0
+20.8 77.72 0
+35 82.5 0
+29.88 76.1 0
+30 75 0
+35 82.5 0
+29.48 77.22 0
+29.88 76.1 0
+35 82.5 0
+28.87 78.16 0
+29.48 77.22 0
+35 82.5 0
+28.07 78.95 0
+28.87 78.16 0
+35 82.5 0
+27.03 79.57 0
+28.07 78.95 0
+35 82.5 0
+25.93 79.91 0
+27.03 79.57 0
+'></Coordinate>
+<Normal vector='0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+0 0 1
+'></Normal>
+</TriangleSet>
+</Shape>
+<Switch whichChoice='0'>
+	<Group>
+		<Shape DEF="edg0">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='15 67.5 0 15 82.5 0 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg1">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='35 67.5 0 15 67.5 0 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg2">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='35 82.5 0 35 67.5 0 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg3">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='2'><Coordinate point='15 82.5 0 35 82.5 0 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg4">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='17'><Coordinate point='20 75 0 20.122 73.9024 0 20.5215 72.7767 0 21.1286 71.8358 0 21.9312 71.0525 0 22.9733 70.4292 0 24.0715 70.087 0 25.1262 70.0016 0 26.1726 70.1394 0 27.1433 70.4827 0 27.9867 70.9901 0 28.6737 71.6083 0 29.198 72.284 0 29.5704 72.9724 0 29.8117 73.6407 0 29.9582 74.3549 0 30 75 0 '/></LineSet>
+		</Shape>
+		<Shape DEF="edg5">
+			<Appearance><Material emissiveColor="0 0 0"/></Appearance>
+			<LineSet vertexCount='17'><Coordinate point='30 75 0 29.878 76.0976 0 29.4785 77.2233 0 28.8714 78.1642 0 28.0688 78.9475 0 27.0267 79.5708 0 25.9285 79.913 0 24.8738 79.9984 0 23.8274 79.8606 0 22.8567 79.5173 0 22.0133 79.0099 0 21.3263 78.3917 0 20.802 77.716 0 20.4296 77.0276 0 20.1883 76.3593 0 20.0418 75.6451 0 20 75 0 '/></LineSet>
+		</Shape>
+	</Group>
+</Switch>
+</Scene>
+</X3D>
